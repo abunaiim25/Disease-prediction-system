@@ -1,0 +1,184 @@
+{% extends 'store/layouts/main.html' %}
+{% load static %}
+
+{% block title %}
+Prediction Items
+{% endblock title %}
+
+
+{% block content %}
+
+<section class="featured pb-5" style="margin-top:100px">
+</section>
+
+
+<section class="form" style="margin-top:-30px; margin-bottom:60px">
+    <div class="container">
+        <div class="result">
+            <div class="card p-3" style="background: #bfdcf3;">
+                <div class="card-header">
+                    <h2 class="text-center">Your Disease Prediction Result</h2>
+                </div>
+                <img src="{% static 'images/diabetes_dark.jpg' %}" width="100%" height="250" class="rounded"
+                    alt="heart_dark">
+                <div class="container">
+                    {% if result %}
+                    <h2 class="text-center mt-3">{{result}}</h2>
+                    {% endif %}
+
+                    <p class="text-center"><small>Consult a doctor before taking any decision.</small></p>
+                </div>
+            </div>
+        </div>
+
+        <section class="featured my-5 pb-5">
+            <div class="container text-center mt-5 py-3">
+                <h3><strong>Diabetes Doctror List</strong></h3>
+                <hr class="mx-auto">
+                <p>List of the Best Diabetes Specialist in Dhaka (Source: <a target="_blank" href="https://www.doctorbangladesh.com/">Doctor Bangladesh</a>) </p>
+            </div>
+
+            <div class="doctors">
+                <div class="row">
+                    <div class="col-md-3">
+                        <div class="doctor">
+                            <div class="card p-2"><!--https://www.doctorbangladesh.com/cardiologist-dhaka/-->
+                                <img src="{% static 'images/Dr.-Md.-Shayedat-Ullah-1.jpg' %}" alt="doctor"
+                                    height="250" style="width:100%">
+                                <h4 class="mt-2">
+                                    Dr. Md. Shayedat Ullah
+                                    <p class="title">BBS (Dhaka), BCS (Health), MACP (USA), MACE (USA), MD (Endocrinology & Metabolism) (BSMMU)</p>
+                                    <p>Diabetes, Thyroid & Hormone & Metabolic Diseases Specialist
+                                        Consultant, Diabetes & Hormone Sheikh Hasina National Institute of Burn & Plastic Surgery.</p>
+                                    <p><b>Chamber & Appointment: </b>Green Life Hospital, Dhaka
+                                        Address: 32, Bir Uttam Shafiullah Sarak (Green Road), Dhanmondi, Dhaka
+                                        Visiting Hour: 6.30pm to 10pm (Closed: Thu & Friday)
+                                        Appointment: +8801987851666</p>
+                                </h4>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-md-3">
+                        <div class="doctor">
+                            <div class="card p-2"><!--https://www.doctorbangladesh.com/cardiologist-dhaka/-->
+                                <img src="{% static 'images/Prof.-Dr.-M.-Nazrul-Islam.jpg' %}" alt="doctor"
+                                    height="250" style="width:100%">
+                                <h4 class="mt-2">
+                                    Prof. Dr. M. Nazrul Islam
+                                    <p class="title">MBBS, FCPS, FRCP (London), FESC, FACC (USA)</p>
+                                    <p>Cardiology (Heart Diseases) Specialist
+                                        Former Director and Professor, Cardiology
+                                        National Institute of Cardiovascular Diseases & Hospital.</p>
+                                    <p><b>Chamber & Appointment: </b>Popular Diagnostic Center, Dhanmondi
+                                        Address: House # 16, Road # 2, Dhanmondi R/A, Dhaka - 1205
+                                        Visiting Hour: 3pm to 5pm (Closed: Thu & Friday)
+                                        Appointment: +8809613787801</p>
+                                </h4>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-md-3">
+                        <div class="doctor">
+                            <div class="card p-2"><!--https://www.doctorbangladesh.com/cardiologist-dhaka/-->
+                                <img src="{% static 'images/Dr.-Dhiman-Banik.jpg' %}" alt="doctor"
+                                    height="250" style="width:100%">
+                                <h4 class="mt-2">
+                                    Prof. Dr. Dhiman Banik
+                                    <p class="title">MBBS (DMC), D-CARD (DU), MD (Cardiology), FACC (USA)</p>
+                                    <p>Cardiology & Heart Diseases Specialist
+                                        Professor & Senior Consultant, Cardiology
+                                        National Heart Foundation Hospital & Research Institute.</p>
+                                    <p><b>Chamber & Appointment: </b>National Heart Foundation Hospital & Research Institute
+                                        Address: Plot # 7/2, Section # 2, Mirpur, Dhaka
+                                        Visiting Hour: Unknown. Please call to know visiting hour
+                                        Appointment: +880258051355</p>
+                                </h4>
+                            </div>
+                        </div>
+                    </div>
+
+                    
+                    <div class="col-md-3">
+                        <div class="doctor">
+                            <div class="card p-2"><!--https://www.doctorbangladesh.com/cardiologist-dhaka/-->
+                                <img src="{% static 'images/Prof.-Dr.-Sajal-Krishna-Banerjee.jpg' %}" alt="doctor"
+                                    height="250" style="width:100%">
+                                <h4 class="mt-2">
+                                    Prof. Dr. Sajal Banerjee
+                                    <p class="title">MBBS, MD (Cardiology), FCCP, FESC, FACC (USA)</p>
+                                    <p>Cardiology & Medicine Specialist
+                                        Professor & Dean, Medicine
+                                        Bangabandhu Sheikh Mujib Medical University Hospital.</p>
+                                    <p><b>Chamber & Appointment: </b>Popular Diagnostic Center, Shantinagar
+                                        Address: Unit # 01, House # 11, Shantinagar, Motijheel, Dhaka
+                                        Visiting Hour: 6pm to 10pm (Closed: Tuesday & Friday)
+                                        Appointment: +8809613787803</p>
+                                </h4>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section>
+            <div class="container text-center mt-5 py-3">
+                <h3><strong>Heart Doctror List</strong></h3>
+                <hr class="mx-auto">
+                <p>List of the Best Cardiologist in Dhaka</p>
+            </div>
+
+            <div class="card p-3">
+                <div class="desc mt-4">
+                    <h2>কী কী লক্ষণ থাকে?</h2>
+                    <p>
+                        এক্ষেত্রে এই কয়েকটি লক্ষণ (Heart Disease Symptoms) দেখা যায়- <br>
+                        ১. বুকে ব্যথা হয়। এক্ষেত্রে ব্যথাটা পিঠ হয়ে হাতের দিকে যেতে পারে, <br>
+                        ২. শ্বাসকষ্ট হয়, <br>
+                        ৩. বুক ধড়ফড় করে, <br>
+                        ৪. এছাড়া অনেকসময় পেটের উপরের দিকে ব্যথা হয়। তাই মানুষ একে অ্যাসিডিটি ভেবেও ভুল করে থাকেন। এই বিষয়টিও
+                        মাথায় রাখতে হবে। <br>
+                    </p><br>
+        
+                    <h2>কাদের বেশি হয়?</h2>
+                    <p>
+                        এক্ষেত্রে কিছু মানুষের হার্টের রোগের আশঙ্কা থাকে বেশি। এই অবস্থায় দাঁড়িয়ে ওজন বেশি (Obesity), ডায়াবিটিস
+                        (Diabetes), প্রেশার (Blood Pressure), কোলেস্টেরল (Cholesterol), পরিবারে এই রোগের ইতিহাস থাকলে প্রতিটি
+                        মানুষকে অবশ্যই তৈরি হয়ে যেতে হবে। তবেই সমস্যার সমাধান করা সম্ভব। নইলে সমস্যা আরও বাড়বে বই কমবে না।
+                    </p><br>
+        
+                    <h2>কী টেস্ট?</h2 <p>
+                    এক্ষেত্রে কয়েকটি টেস্ট অবশ্যই করিয়ে নিতে হয়। এক্ষেত্রে প্রাথমিক টেস্ট হল ECG. এছাড়া প্রয়োজন মতো করতে হতে
+                    পারে Serial ECG. এরপরও জরুরি হলে করা হয়ে থাকে ইকো। এছাড়া দরকারে করতে হয় সিটি করোনারি অ্যাঞ্জিও, ট্রেডমিল
+                    টেস্ট ইত্যাদি। এবার একজন চিকিৎসককেই দ্রুত এই বিষয়ে সিদ্ধান্ত নিতে হয়।
+                    </p><br>
+        
+                    <h2>চিকিৎসা কী?</h2>
+                    <p>
+                        সাধারণত একটি বা দুটি ধমনীতে সামান্য ব্লক থাকলে অ্যাঞ্জিওপ্লাস্টি করে নিতে হয়। এছাড়া তিনটি আর্টারিতে
+                        ব্লক থাকলে করতে হয় বাইপাস। তবে সবক্ষেত্রে কিন্তু এমন চিকিৎসার (Heart Disease Treatment) প্রয়োজন হয় না।
+                        এক্ষেত্রে একটি ধমনিতে কম ব্লক থাকলে ওষুধেই কাজ হয়ে যায়। তবে এক্ষেত্রে সারাজীবন অ্যাসপিরিন, কোলেস্টেরল সহ
+                        নানা ওষুধ খেয়ে যেতে হয়। তবেই রোগী সুস্থ থাকেন।
+                    </p><br>
+                </div>
+            </div>
+        </section>
+        
+
+
+    </div>
+</section>
+
+
+
+
+{% endblock content %}
+
+
+{% block scripts %}
+<script>
+
+</script>
+{% endblock scripts %}

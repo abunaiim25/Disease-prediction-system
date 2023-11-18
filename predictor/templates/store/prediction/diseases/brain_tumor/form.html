@@ -1,0 +1,69 @@
+{% extends 'store/layouts/main.html' %}
+{% load static %}
+
+{% block title %}
+Prediction Items
+{% endblock title %}
+
+
+{% block content %}
+
+<section class="featured pb-5" style="margin-top:100px">
+    <div class="container text-center">
+        <h3><strong>Diabetes Risk Assessment</strong></h3>
+        <hr class="mx-auto">
+        <p>You can check your disease through this application</p>
+    </div>
+</section>
+
+
+<section class="form" style="margin-top:-30px; margin-bottom:60px">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-7 mx-auto">
+                <div class="card mx-auto bg-light">
+                    <div class="card-header" style="background-color: #103783; color: white">
+                        <h2 class="text-center">Check your Diabetes</h2>
+                    </div>
+                    <div class="card-body bg-light">
+
+                        <div class="container">
+                            <form method="POST" enctype="multipart/form-data">
+                                {% csrf_token %}
+
+                                <div class="controls">
+                                    <div class="row">
+
+                                        <div class="col-md-12">
+                                            <input type="file" name="brain_image" id="">
+                                        </div>
+                                        
+                                       
+                                        <div class="col-md-12">
+                                            <button class="w-100 button_a">PREDICT DIABETES</button>
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+{% if result %}
+      <h1 class="text-center">Your {{result}}</h1>
+{% endif %}
+
+
+{% endblock content %}
+
+
+{% block scripts %}
+<script>
+
+</script>
+{% endblock scripts %}

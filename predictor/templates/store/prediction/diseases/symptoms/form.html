@@ -1,0 +1,134 @@
+{% extends 'store/layouts/main.html' %}
+{% load static %}
+
+{% block title %}
+Prediction - Disease Result
+{% endblock title %}
+
+
+{% block content %}
+
+<div class="container">
+    <section  id="prediction_banner_disease" style="background-image: url('{% static "images/symptom.jpg"%}')">
+      <div class="p-5 mt-5">
+        <h2 class="text-center" style="color: white">Symptoms To Find Disease</h2>
+        <p style="color: white">You can check your disease through this application</p>
+        </div>
+      </div>
+    </section>
+  </div>
+
+<section class="featured" style="margin-top:50px">
+    <div class="container text-center">
+        <h3><strong>Risk Assessment</strong></h3>
+        <hr class="mx-auto">
+    </div>
+</section>
+
+
+<section class="form" style="margin-bottom:60px">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-7 mx-auto">
+                <div class="card mx-auto bg-light">
+                    <div class="card-header" style="background-color: #103783; color: white">
+                        <h2 class="text-center">Check For Possible Disease</h2>
+                    </div>
+                    <div class="card-body bg-light">
+
+                        <div class="container">
+                            <form method="POST" action="{% url 'predictdisease' %}" id="myform">
+                                {% csrf_token %}
+                                <div class="form-group row  mb-3">
+                                    <label for="Symptom1" class="col-sm-2 col-form-label">Symptom1</label>
+                                    <div class="col-sm-6">
+                                        <input type="text" class="form-control" list="symp" multiple="multiple"
+                                            name="Symptom1" id="Symptom1" placeholder="Fill In 1 Symptom" required="">
+                                    </div>
+                                    <datalist id="symp">
+                                        {% for symp in symptoms %}
+                                        <option value="{{symp}}">{{symp}}</option>
+                                        {% endfor %}
+                                    </datalist>
+                                </div>
+
+                                <div class="form-group row  mb-3">
+                                    <label for="Symptom2" class="col-sm-2 col-form-label">Symptom2</label>
+                                    <div class="col-sm-6">
+                                        <input type="text" class="form-control" list="symp" name="Symptom2"
+                                            id="Symptom2" placeholder="Fill In 2 Symptom" required="">
+                                    </div>
+                                    <datalist id="symp">
+                                        {% for symp in symptoms %}
+                                        <option value="{{symp}}">{{symp}}</option>
+                                        {% endfor %}
+                                    </datalist>
+                                </div>
+
+                                <div class="form-group row  mb-3">
+                                    <label for="Symptom3" class="col-sm-2 col-form-label">Symptom3</label>
+                                    <div class="col-sm-6">
+                                        <input type="text" class="form-control" list="symp" name="Symptom3"
+                                            placeholder="Fill In 3 Symptom" required="">
+                                    </div>
+                                    <datalist id="symp">
+                                        {% for symp in symptoms %}
+                                        <option value="{{symp}}">{{symp}}</option>
+                                        {% endfor %}
+                                    </datalist>
+                                </div>
+
+                                <div class="form-group row  mb-3">
+                                    <label for="Symptom4" class="col-sm-2 col-form-label">Symptom4</label>
+                                    <div class="col-sm-6">
+                                        <input type="text" class="form-control" multiple="multiple" list="symp"
+                                            name="Symptom4" placeholder="Fill In 4 Symptom" required="">
+                                    </div>
+                                    <datalist id="symp">
+                                        {% for symp in symptoms %}
+                                        <option value="{{symp}}">{{symp}}</option>
+                                        {% endfor %}
+                                    </datalist>
+                                </div>
+
+
+                                <div class="form-group row mb-3">
+                                    <label for="Symptom5" class="col-sm-2 col-form-label">Symptom5</label>
+                                    <div class="col-sm-6">
+                                        <input type="text" class="form-control" list="symp" name="Symptom5"
+                                            placeholder="Fill In 5 Symptom" required="">
+                                    </div>
+                                    <datalist id="symp">
+                                        {% for symp in symptoms %}
+                                        <option value="{{symp}}">{{symp}}</option>
+                                        {% endfor %}
+                                    </datalist>
+                                </div>
+
+                                <div class="form-group row  mb-3">
+                                        <button class="w-100 button_a">PREDICT YOUR DISEASE</button>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+
+{% if result %}
+<h1 class="text-center">Your {{result}}</h1>
+{% endif %}
+
+
+{% endblock content %}
+
+
+{% block scripts %}
+<script>
+
+</script>
+{% endblock scripts %}

@@ -1,0 +1,32 @@
+{% extends 'store/layouts/main.html' %}
+{% load static %}
+
+{% block title %}
+Disease Predictor - Predict History
+{% endblock title %}
+
+
+{% block content %}
+<div class="container">
+    <section id="prediction_banner_disease" style="background-image: url('{% static "images/history_dark.png"%}');">
+        <div class="p-5 mt-5">
+            <h2 class="text-center" style="color: white">Predict History</h2>
+            <p style="color: white">Disease prediction system using machine learning</p>
+        </div>
+    </section>
+</div>
+
+<section class="featured" style="margin-top:50px">
+    <div class="container text-center">
+        <h3><strong>History</strong></h3>
+        <hr class="mx-auto">
+    </div>
+</section>
+
+<section class="form" style="margin-bottom:60px">
+
+</section>
+
+
+
+{% endblock content %}

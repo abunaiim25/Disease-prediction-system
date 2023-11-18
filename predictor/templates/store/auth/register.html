@@ -1,0 +1,48 @@
+{% extends 'store/layouts/main.html' %}
+{% load static %}
+
+{% block title %}
+Register
+{% endblock title %}
+  
+
+{% block content %}
+<div class="auth">
+    <div class="main">  	
+		<input type="checkbox" id="chk" aria-hidden="true">
+
+			<div class="signup">
+				<form method="POST">
+                    {% csrf_token %}
+
+					<label for="chk" aria-hidden="true">Sign up</label>
+
+                    {{ form.username}}
+                    {% if form.errors.username %}
+					<span class="text-danger">{{ form.errors.username }}</span>
+                    {% endif %}
+
+					{{ form.email}}
+                    {% if form.errors.email %}
+                    <span class="text-danger">{{ form.errors.email }}</span>
+                    {% endif %}
+
+					{{ form.password1}}
+                    {% if form.errors.password1 %}
+                    <span class="text-danger">{{ form.errors.password1 }}</span>
+                    {% endif %}
+
+                    {{ form.password2}}
+                    {% if form.errors.password2 %}
+                    <span class="text-danger">{{ form.errors.password2 }}</span>
+                    {% endif %}
+
+					<button type="submit">Sign up</button>
+				</form>
+			</div>
+
+		
+	</div>
+</div>
+{% endblock content %}
+

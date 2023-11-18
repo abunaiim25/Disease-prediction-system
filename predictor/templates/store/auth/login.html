@@ -1,0 +1,46 @@
+{% extends 'store/layouts/main.html' %}
+{% load static %}
+
+{% block title %}
+Login
+{% endblock title %}
+  
+
+{% block content %}
+<div class="auth">
+    <div class="main">  	
+		<input type="checkbox" id="chk" aria-hidden="true">
+
+        <div class="top">
+			<div class="login">
+				<form method="POST">
+                    {% csrf_token %}
+
+					<label for="chk" aria-hidden="true">Login</label>
+
+					<input type="text" name="username" placeholder="Enter username" required="">
+
+					<input type="password" name="password" id="input_pass" placeholder="Enter Password" required="">
+                    <input style="margin:0; margin-left:60px" type="checkbox" onclick="show_pass()">
+              
+					<button  type="submit">Login</button>
+				</form>
+			</div>
+        </div>
+	</div>
+</div>
+{% endblock content %}
+
+
+{% block scripts %}
+<script>
+    function show_pass() {
+      var x = document.getElementById("input_pass");
+      if (x.type === "password") {
+        x.type = "text";
+      } else {
+        x.type = "password";
+      }
+    }
+    </script>
+{% endblock scripts %}

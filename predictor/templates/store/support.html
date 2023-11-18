@@ -1,0 +1,78 @@
+{% extends 'store/layouts/main.html' %}
+{% load static %}
+
+{% block title %}
+Disease Predictor - Support
+{% endblock title %}
+
+
+{% block content %}
+<div class="container">
+    <section id="prediction_banner_disease" style="background-image: url('{% static "images/help2.jpg"%}');">
+        <div class="p-5 mt-5">
+            <h2 class="text-center" style="color: white">Support</h2>
+            <p style="color: white">How can we help you?</p>
+        </div>
+    </section>
+</div>
+
+<section class="featured" style="margin-top:50px">
+    <div class="container text-center">
+        <h3><strong>Help</strong></h3>
+        <hr class="mx-auto">
+    </div>
+</section>
+
+<section class="form" style="margin-bottom:60px">
+    <div class="container">
+
+        <div class="row">
+            <div class="col-lg-4 col-md-4 col-6" >
+                <div class="card p-5 m-2 support">
+                    <h4 class="text-white">Login into the System using your account</h4>
+                </div>
+            </div>
+
+            <div class="col-lg-4 col-md-4 col-6">
+                <div class="card p-5 m-2 support">
+                    <h4 class="text-white">Select the type of disease</h4>
+                </div>
+            </div>
+
+            <div class="col-lg-4 col-md-4 col-6">
+                <div class="card p-5 m-2 support">
+                    <h4 class="text-white">Give the patient symptoms as input</h4>
+                </div>
+            </div>
+
+            <div class="col-lg-4 col-md-4 col-6">
+                <div class="card p-5 m-2 support">
+                    <h4 class="text-white">Click on submit</h4>
+                </div>
+            </div>
+
+            <div class="col-lg-4 col-md-4 col-6">
+                <div class="card p-5 m-2 support">
+                    <h4 class="text-white">Then you get your result</h4>
+                </div>
+            </div>
+
+            <div class="col-lg-4 col-md-4 col-6">
+                <div class="card p-5 m-2 support">
+                    <h4 class="text-white">Download as PDF</h4>
+                </div>
+            </div>
+
+            <div class="col-lg-4 col-md-4 col-6">
+                <div class="card p-5 m-2 support">
+                    <h4 class="text-white">You can save the disease</h4>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</section>
+
+
+
+{% endblock content %}

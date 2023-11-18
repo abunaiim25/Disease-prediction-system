@@ -1,0 +1,308 @@
+{% extends 'store/layouts/main.html' %}
+{% load static %}
+
+{% block title %}
+Prediction - Heart Disease Result
+{% endblock title %}
+
+
+{% block content %}
+
+<div class="container">
+    <section  id="prediction_banner_disease" style="background-image: url('{% static "images/heart_dark.jpg"%}')">
+      <div class="p-5 mt-5">
+        <h2 class="text-center" style="color: white">Heart Disease</h2>
+        <p style="color: white">You can check your disease through this application</p>
+        </div>
+      </div>
+    </section>
+</div>
+
+<section class="featured" style="margin-top:50px">
+    <div class="container text-center">
+        <h3><strong>Risk Assessment</strong></h3>
+        <hr class="mx-auto">
+    </div>
+</section>
+
+
+<section class="form" style="margin-bottom:60px">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-7 mx-auto">
+                <div class="card mx-auto bg-light">
+                    <div class="card-header" style="background-color: #103783; color: white">
+                        <h2 class="text-center">Check For Possible Disease</h2>
+                    </div>
+                    <div class="card-body bg-light">
+
+                        <div class="container">
+                            <form method="POST">
+                                {% csrf_token %}
+
+                                <div class="controls">
+                                    <div class="row">
+
+                                        <div class="col-md-6 mb-3">
+                                            <div class="form-group">
+                                                <label>Age</label>
+                                                <select name="Age" class="form-control" required="required">
+                                                    <option value="" selected disabled>Select your age category</option>
+                                                    <option value="1">18-24</option>
+                                                    <option value="2">25-29</option>
+                                                    <option value="3">30-34</option>
+                                                    <option value="4">35-39</option>
+                                                    <option value="5">40-44</option>
+                                                    <option value="6">45-49</option>
+                                                    <option value="7">50-54</option>
+                                                    <option value="8">55-59</option>
+                                                    <option value="9">60-64</option>
+                                                    <option value="10">65-69</option>
+                                                    <option value="11">70-74</option>
+                                                    <option value="12">75-79</option>
+                                                    <option value="13">80 or older</option>
+                                                </select>
+                                            </div>
+                                        </div>
+
+                                        <div class="col-md-6 mb-3">
+                                            <div class="form-group">
+                                                <label>Sex</label>
+                                                <select name="Sex" class="form-control" required="required">
+                                                    <option value="" selected disabled>Select your gender</option>
+                                                    <option value="1">Male</option>
+                                                    <option value="0">Female</option>
+                                                </select>
+                                            </div>
+                                        </div>
+
+                                        <div class="col-md-6 mb-3">
+                                            <div class="form-group">
+                                                <label>BMI</label>
+                                                <input type="number" step=any name="BMI" class="form-control"
+                                                    placeholder="" required="required" min="0">
+                                            </div>
+                                        </div>
+
+                                        <div class="col-md-6 mb-3">
+                                            <div class="form-group">
+                                                <label>High Blood Pressure</label>
+                                                <select name="HighBP" class="form-control" required="required">
+                                                    <option value="" selected disabled>Select high blood pressure</option>
+                                                    <option value="1">Yes</option>
+                                                    <option value="0">No</option>
+                                                </select>
+                                            </div>
+                                        </div>
+
+                                        <div class="col-md-6 mb-3">
+                                            <div class="form-group">
+                                                <label>High Cholesterol</label>
+                                                <select name="HighChol" class="form-control" required="required">
+                                                    <option value="" selected disabled>Select high cholesterol</option>
+                                                    <option value="1">Yes</option>
+                                                    <option value="0">No</option>
+                                                </select>
+                                            </div>
+                                        </div>
+
+                                        <div class="col-md-6 mb-3">
+                                            <div class="form-group">
+                                                <label>Stroke</label>
+                                                <select name="Stroke" class="form-control" required="required">
+                                                    <option value="" selected disabled>Select stroke</option>
+                                                    <option value="1">Yes</option>
+                                                    <option value="0">No</option>
+                                                </select>
+                                            </div>
+                                        </div>
+
+                                        <div class="col-md-6 mb-3">
+                                            <div class="form-group">
+                                                <label>Diabetic</label>
+                                                <select name="Diabetes" class="form-control" required="required">
+                                                    <option value="" selected disabled>Select diabetes</option>
+                                                    <option value="2">Yes</option>
+                                                    <option value="0">No</option>
+                                                    <option value="1">Prediabetes</option>
+                                                </select>
+                                            </div>
+                                        </div>
+
+                                        <div class="col-md-6 mb-3">
+                                            <div class="form-group">
+                                                <label>What's your general health right now?</label>
+                                                <select name="GenHlth" class="form-control" required="required">
+                                                    <option value="" selected disabled>Select general health</option>
+                                                    <option value="1">Excellent </option>
+                                                    <option value="2">Very good</option>
+                                                    <option value="3">Good  </option>
+                                                    <option value="4">Fair</option>
+                                                    <option value="5">Poor </option>
+                                                </select>
+                                            </div>
+                                        </div>
+
+                                        <div class="col-md-6 mb-3">
+                                            <div class="form-group">
+                                                <label>Have you cholesterol checked in last 5 years?</label>
+                                                <select name="CholCheck" class="form-control" required="required">
+                                                    <option value="" selected disabled>Select cholesterol check</option>
+                                                    <option value="1">Yes</option>
+                                                    <option value="0">No</option>
+                                                </select>
+                                            </div>
+                                        </div>
+
+                            
+                                        <div class="col-md-6 mb-3">
+                                            <div class="form-group">
+                                                <label>Have you smoked at least 100 cigarettes in your entire life?</label>
+                                                <select name="Smoker" class="form-control" required="required">
+                                                    <option value="" selected disabled>Select smoking</option>
+                                                    <option value="1">Yes</option>
+                                                    <option value="0">No</option>
+                                                </select>
+                                            </div>
+                                        </div>
+
+
+                                        <div class="col-md-6 mb-3">
+                                            <div class="form-group">
+                                                <label>What's your education level right now?</label>
+                                                <select name="Education" class="form-control" required="required">
+                                                    <option value="" selected disabled>Select education level</option>
+                                                    <option value="1">Never attended school or only kindergarten </option>
+                                                    <option value="2">Grades 1-8 (Elementary)</option>
+                                                    <option value="3">Grades 9-11 (Some high school)  </option>
+                                                    <option value="4">Grade 12 or GED (High school graduate)</option>
+                                                    <option value="5">College 1 year to 3 years (Some college or technical school) </option>
+                                                    <option value="6">College 4 years or more (College graduate) </option>
+                                                </select>
+                                            </div>
+                                        </div>
+
+ 
+                                        <div class="col-md-6 mb-3">
+                                            <div class="form-group">
+                                                <label>Consume fruit 1 or more times per day</label>
+                                                <select name="Fruits" class="form-control" required="required">
+                                                    <option value="" selected disabled>Select consume fruit</option>
+                                                    <option value="1">Yes</option>
+                                                    <option value="0">No</option>
+                                                </select>
+                                            </div>
+                                        </div>
+
+                                        <div class="col-md-6 mb-3">
+                                            <div class="form-group">
+                                                <label>Consume vegetables 1 or more times per day</label>
+                                                <select name="Veggies" class="form-control" required="required">
+                                                    <option value="" selected disabled>Select consume vegetables</option>
+                                                    <option value="1">Yes</option>
+                                                    <option value="0">No</option>
+                                                </select>
+                                            </div>
+                                        </div>
+
+                                        <div class="col-md-6 mb-3">
+                                            <div class="form-group">
+                                                <label>Have any kind of health care coverage?</label>
+                                                <select name="AnyHealthcare" class="form-control" required="required">
+                                                    <option value="" selected disabled>Select Any health care</option>
+                                                    <option value="1">Yes</option>
+                                                    <option value="0">No</option>
+                                                </select>
+                                            </div>
+                                        </div>
+
+                                        <div class="col-md-6 mb-3">
+                                            <div class="form-group">
+                                                <label>Heavy alcohol consum (adult men having more than 14 drinks per week and adult women having more than 7 drinks per week)</label>
+                                                <select name="HvyAlcoholConsump" class="form-control" required="required">
+                                                    <option value="" selected disabled>Select consume alcohol</option>
+                                                    <option value="1">Yes</option>
+                                                    <option value="0">No</option>
+                                                </select>
+                                            </div>
+                                        </div>
+
+                                        <div class="col-md-6 mb-3">
+                                            <div class="form-group">
+                                                <label>Was there a time in the past 12 months when you needed to see a doctor but could not because of cost?</label>
+                                                <select name="NoDocbcCost" class="form-control" required="required">
+                                                    <option value="" selected disabled>Select NoDocbcCost</option>
+                                                    <option value="1">Yes</option>
+                                                    <option value="0">No</option>
+                                                </select>
+                                            </div>
+                                        </div>
+
+                                       
+
+                                        <div class="col-md-6 mb-3">
+                                            <div class="form-group">
+                                                <label>Now thinking about your mental health,  which includes stress, depression, and problems with emotions, how many days during the past 30?</label>
+                                                <input type="number" step=any name="MentHlth" class="form-control"
+                                                    placeholder="" required="required" min="0">
+                                            </div>
+                                        </div>
+
+                                        <div class="col-md-6 mb-3">
+                                            <div class="form-group">
+                                                <label>Now thinking about your physical health, which includes physical illness and injury, how many days during the past 30?</label>
+                                                <input type="number" step=any name="PhysHlth" class="form-control"
+                                                    placeholder="" required="required" min="0">
+                                            </div>
+                                        </div>
+
+                                        <div class="col-md-6 mb-3">
+                                            <div class="form-group">
+                                                <label>Do you have serious difficulty walking or climbing stairs?</label>
+                                                <select name="DiffWalk" class="form-control" required="required">
+                                                    <option value="" selected disabled>Select difficulty walking</option>
+                                                    <option value="1">Yes</option>
+                                                    <option value="0">No</option>
+                                                </select>
+                                            </div>
+                                        </div>
+
+                                        <div class="col-md-6 mb-3">
+                                            <div class="form-group">
+                                                <label>Physical activity in past 30 days (Not including job)</label>
+                                                <select name="PhysActivity" class="form-control" required="required">
+                                                    <option value="" selected disabled>Select physical activity</option>
+                                                    <option value="1">Yes</option>
+                                                    <option value="0">No</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                       
+                                        <div class="col-md-12">
+                                            <button class="w-100 button_a">PREDICT HEART</button>
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+{% if result %}
+      <h1 class="text-center">Your {{result}}</h1>
+{% endif %}
+
+
+{% endblock content %}
+
+
+{% block scripts %}
+<script>
+
+</script>
+{% endblock scripts %}
