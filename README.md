@@ -6,4 +6,4 @@ Feature: Authentication, Profile, Admin Panel, About App, Symptoms to find disea
 Diabetics prediction, Heart disease prediction, cancer prediction, Support.
 
 ## Tools:
-HTML, CSS, Bootstrap, JavaScript, Jquery, Django, MySQL (Web).
+Machine Learning (AI), HTML, CSS, Bootstrap, JavaScript, Jquery, Django, MySQL (Web).
