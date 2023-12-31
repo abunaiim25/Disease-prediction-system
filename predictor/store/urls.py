@@ -5,8 +5,10 @@ from store.controller import authview, prediction, prediction_symptoms
 urlpatterns = [
      path('', views.home, name = 'home'),
      path('support', views.support, name="help_support"),
-     path('about-application', views.about_app, name="about_app"),
-     path('predict-history', views.history, name="history"),
+     path('about-disease', views.about_disease, name="about_disease"),
+     path('predict-saved', views.saved, name="saved"),
+     path('save_prediction', views.save_prediction, name="save_prediction"),
+     
 
      #auth
      path('register', authview.register, name="register"),

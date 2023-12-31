@@ -23,7 +23,7 @@
           </li>
 
           <li class="nav-item">
-            <a class="nav-link {% if request.resolver_match.url_name == 'about_app' %}active{% endif %}" aria-current="page" href="{% url 'about_app' %}">About App</a>
+            <a class="nav-link {% if request.resolver_match.url_name == 'about_disease' %}active{% endif %}" aria-current="page" href="{% url 'about_disease' %}">About Disease</a>
           </li>
 
           <li class="nav-item">
@@ -37,7 +37,7 @@
           </li>
 
           <li class="nav-item">
-            <a class="nav-link {% if request.resolver_match.url_name == 'history' %}active{% endif %}" aria-current="page" href="{% url 'history' %}">Predict History</a>
+            <a class="nav-link {% if request.resolver_match.url_name == 'saved' %}active{% endif %}" aria-current="page" href="{% url 'saved' %}">Predict Saved</a>
           </li>
 
            <li class="nav-item">

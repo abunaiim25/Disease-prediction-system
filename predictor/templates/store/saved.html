@@ -1,0 +1,55 @@
+{% extends 'store/layouts/main.html' %}
+{% load static %}
+
+{% block title %}
+Disease Predictor - Predict History
+{% endblock title %}
+
+
+{% block content %}
+<div class="container">
+    <section id="prediction_banner_disease" style="background-image: url('{% static "images/history_dark.png"%}');">
+        <div class="p-5 mt-5">
+            <h2 class="text-center" style="color: white">Predict Saved</h2>
+            <p style="color: white">Consult a doctor before taking any decision</p>
+        </div>
+    </section>
+</div>
+
+<section class="featured" style="margin-top:50px">
+    <div class="container text-center">
+        <h3><strong>Saved</strong></h3>
+        <hr class="mx-auto">
+    </div>
+</section>
+
+<section class="form" style="margin-bottom:60px">
+    <div class="container">
+       <div class="card">
+        <table class="table table-striped ">
+            <thead class="table-dark">
+                <tr>
+                    <th>SI</th>
+                    <th>Date</th>
+                    <th colspan="4">Symptoms</th>
+                    <th>Result</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for item in predict %}
+                <tr>
+                    <th>{{ forloop.counter }}</th>
+                    <td>{{ item.created_at }}</td>
+                    <td colspan="4">{{ item.symptoms_input }}</td>
+                    <td class="bg-danger text-white text-center">{{ item.symptoms_result }}</td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+       </div>
+    </div>
+</section>
+
+
+
+{% endblock content %}

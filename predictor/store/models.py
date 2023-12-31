@@ -24,3 +24,13 @@ class Profile(models.Model):
    
     def __str__(self):
         return self.user.username
+    
+class SavePredict(models.Model):
+    user = models.ForeignKey(User, on_delete=models.CASCADE)#join
+    symptoms_input = models.TextField(null=False)
+    symptoms_result = models.CharField(max_length=150, null=False)
+    created_at = models.DateTimeField(auto_now_add=True)
+    updated_at = models.DateTimeField(auto_now=True)
+   
+    def __str__(self):
+        return self.user.username

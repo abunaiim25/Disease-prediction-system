@@ -28,7 +28,12 @@ Prediction - Heart Disease Result
                         alt="dark">
                     <div class="right_top">
                         <button id="btn-pdf" class="button_pdf btn">PDF</button>
-                        <button class="button_save btn">Save</button>
+                        <form action="{% url 'save_prediction' %}" method="POST">
+                            {% csrf_token %}
+                            <input type="hidden" name="symptoms_input" value="{{psymptoms}}">
+                            <input type="hidden" name="symptoms_result" value="{{result}}">
+                            <button type="submit" class="button_save btn mt-2">Save</button>
+                        </form>
                     </div>
                     <div class="center">
                         <h2>Your Heart Disease Prediction Result</h2>

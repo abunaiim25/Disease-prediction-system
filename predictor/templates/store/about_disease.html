@@ -1,0 +1,313 @@
+{% extends 'store/layouts/main.html' %}
+{% load static %}
+
+{% block title %}
+Disease Predictor - About Disease
+{% endblock title %}
+
+
+{% block content %}
+<div class="container">
+    <section id="prediction_banner_disease" style="background-image: url('{% static "images/banner3_dark.jpg"%}');">
+        <div class="p-5 mt-5">
+            <h2 class="text-center" style="color: white">About Disease</h2>
+            <p style="color: white">Disease prediction system using machine learning</p>
+        </div>
+    </section>
+</div>
+
+<section class="featured" style="margin-top:50px; margin-bottom:50px">
+    <div class="container">
+        <h3 class="text-center"><strong>About App</strong></h3>
+        <hr class="mx-auto">
+        <p>
+            Disease Prediction, a web application that diagnoses patients from their symptoms, is an example of the
+            latest healthcare construct. Our web application provides simple to digital prediction of various diseases
+            like heart disease, diabetics, etc. This personal health is easily provided with an accessible web
+            interface, it is itself specially customized and able to provide well-informed predictions. It is a modern
+            pro-active health management where urgent recommendations are based on personal parameters and history data.
+            Our system provides a user-friendly web interface to enter personal health information safely and securely.
+            Easy to navigate and personalized forecasts are provided in a clear and understandable format. Be able to
+            easily monitor your health status and receive alerts and updates based on your health information.
+        </p>
+    </div>
+</section>
+
+<section class="form" style="margin-bottom:60px">
+    <div class="container">
+
+        <div class="sym">
+            <div>
+                <h3><strong>Symptoms to Disease Prediction</strong></h3>
+                <p>
+                    DecisionTreeClassifier algorithm is used in symptom to disease prediction section. Using this
+                    DecisionTreeClassifier algorithm the accuracy is 1. This algorithm gives correct result most of the
+                    time due to accuracy 1.
+                </p>
+            </div>
+
+            <table class="table table-striped ">
+                <thead class="table-dark">
+                    <tr>
+                        <th>SI</th>
+                        <th colspan="4">Symptoms</th>
+                        <th>Disease</th>
+                    </tr>
+                </thead>
+                <tbody>
+                <tbody id="tableBody">
+                    <!-- Table data will be dynamically added here -->
+                </tbody>
+                </tbody>
+            </table>
+
+            <div id="data-container"></div>
+        </div>
+
+        <div class="Diabetics mt-5">
+            <div>
+                <h3><strong>Diabetics</strong></h3>
+                <p>
+                    LogisticRegression algorithm is used in Diabetics prediction section. Using this LogisticRegression algorithm the accuracy is 0.95. This algorithm gives correct result most of the time due to accuracy 0.95.
+                </p>
+            </div>
+        </div>
+
+        <div class="Diabetics mt-5">
+            <div>
+                <h3><strong>Heart Disease</strong></h3>
+                <p>
+                    RandomForestClassifier algorithm is used in Diabetics prediction section. Using this RandomForestClassifier algorithm the accuracy is 0.99. This algorithm gives correct result most of the time due to accuracy 0.99.
+                </p>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+
+{% endblock content %}
+
+
+{% block scripts %}
+<script>
+
+
+    var tableData = [
+        {
+            "id": 1,
+            "symptoms": "painful_walking, movement_stiffness, swelling_joints, stiff_neck ",
+            "result": "Arthritis"
+        },
+        {
+            "id": 2,
+            "symptoms": "dischromic _patches, itching, skin_rash, nodal_skin_eruptions",
+            "result": "Fungal infection"
+        },
+        {
+            "id": 3,
+            "symptoms": "watering_from_eyes, chills, shivering, continuous_sneezing",
+            "result": "Allergy"
+        },
+        {
+            "id": 4,
+            "symptoms": "chest_pain, cough, vomiting, ulcers_on_tongue, acidity,  stomach_pain",
+            "result": "GERD (Gastroesophageal Reflux Disease)"
+        },
+        {
+            "id": 5,
+            "symptoms": "yellowing_of_eyes, abdominal_pain, loss_of_appetite, nausea, yellowish_skin, vomiting, itching",
+            "result": "Chronic cholestasis"
+        },
+        {
+            "id": 6,
+            "symptoms": "spotting_ urination, stomach_pain, skin_rash, itching",
+            "result": "Drug Reaction"
+        },
+        {
+            "id": 7,
+            "symptoms": "passage_of_gases, abdominal_pain, loss_of_appetite, indigestion, vomiting",
+            "result": "Peptic ulcer diseae"
+        },
+        {
+            "id": 8,
+            "symptoms": "extra_marital_contacts, high_fever, patches_in_throat, muscle_wasting",
+            "result": "AIDS"
+        },
+        {
+            "id": 9,
+            "symptoms": "polyuria, increased_appetite, excessive_hunger, obesity",
+            "result": "Diabetes"
+        },
+        {
+            "id": 10,
+            "symptoms": "diarrhoea, dehydration, sunken_eyes, vomiting",
+            "result": "Gastroenteritis"
+        },
+        {
+            "id": 11,
+            "symptoms": "mucoid_sputum, family_history, breathlessness, cough, fatigue",
+            "result": "Bronchial Asthma"
+        },
+        {
+            "id": 12,
+            "symptoms": "loss_of_balance, dizziness, chest_pain, headache",
+            "result": "Hypertension"
+        },
+        {
+            "id": 13,
+            "symptoms": "visual_disturbances, irritability, headache, blurred_and_distorted_vision, indigestion",
+            "result": "Migraine"
+        },
+        {
+            "id": 14,
+            "symptoms": "loss_of_balance, dizziness, neck_pain, weakness_in_limbs",
+            "result": "Cervical spondylosis"
+        },
+        {
+            "id": 15,
+            "symptoms": "weakness_of_one_body_side, headache, vomiting",
+            "result": "Paralysis (brain hemorrhage)"
+        },
+        {
+            "id": 16,
+            "symptoms": "abdominal_pain, dark_urine, yellowish_skin, high_fever, weight_loss, fatigue, vomiting",
+            "result": "Jaundice"
+        },
+        {
+            "id": 17,
+            "symptoms": "red_spots_over_body, malaise, mild_fever, loss_of_appetite, headache, lethargy, high_fever, fatigue, skin_rash, itching",
+            "result": "Chicken pox"
+        },
+        {
+            "id": 18,
+            "symptoms": "red_spots_over_body, muscle_pain, malaise, back_pain, pain_behind_the_eyes, loss_of_appetite, nausea, headache, high_fever, fatigue, joint_pain, vomiting, skin_rash",
+            "result": "Dengue"
+        },
+        {
+            "id": 19,
+            "symptoms": "muscle_pain, yellowing_of_eyes, mild_fever, diarrhoea, abdominal_pain, loss_of_appetite, nausea, dark_urine, yellowish_skin, abdominal_pain,joint_pain, vomiting",
+            "result": "hepatitis A"
+        },
+        {
+            "id": 20,
+            "symptoms": "receiving_unsterile_injections, malaise, yellowing_of_eyes, yellow_urine, receiving_unsterile_injections, yellowish_skin, dark_urine, loss_of_appetite, abdominal_pain,  itching, fatigue, lethargy",
+            "result": "Hepatitis B"
+        },
+        {
+            "id": 21,
+            "symptoms": "family_history, yellowing_of_eyes, loss_of_appetite, nausea, yellowish_skin, fatigue",
+            "result": "Hepatitis C"
+        },
+        {
+            "id": 22,
+            "symptoms": "yellowing_of_eyes, abdominal_pain, loss_of_appetite, nausea, dark_urine,  vomiting, joint_pain, fatigue, yellowish_skin",
+            "result": "Hepatitis D"
+        },
+        {
+            "id": 23,
+            "symptoms": "acute_liver_failure, yellowing_of_eyes, abdominal_pain, high_fever, yellow_urine, dark_urine, nausea, loss_of_appetite,  joint_pain, vomiting, fatigue",
+            "result": "Hepatitis E"
+        },
+        {
+            "id": 24,
+            "symptoms": "history_of_alcohol_consumption, distention_of_abdomen, swelling_of_stomach, abdominal_pain, vomiting, yellowish_skin",
+            "result": "Alcoholic hepatitis"
+        },
+        {
+            "id": 25,
+            "symptoms": "blood_in_sputum, chest_pain, phlegm, malaise, swelled_lymph_nodes, breathlessness, sweating, loss_of_appetite, mild_fever, yellowing_of_eyes, chills, vomiting, fatigue, weight_loss, high_fever",
+            "result": "Tuberculosis"
+        },
+        {
+            "id": 26,
+            "symptoms": "sinus_pressure, redness_of_eyes, throat_irritation, phlegm, congestion, muscle_pain, loss_of_smell, chest_pain,runny_nose, malaise, swelled_lymph_nodes, headache, high_fever, cough, continuous_sneezing, chills, fatigue",
+            "result": "Common Cold"
+        },
+        {
+            "id": 27,
+            "symptoms": "rusty_sputum, fast_heart_rate, chest_pain, phlegm, malaise, fatigue, cough, high_fever, breathlessness, sweating, chills",
+            "result": "Pneumonia"
+        },
+        {
+            "id": 28,
+            "symptoms": "irritation_in_anus, bloody_stool, pain_in_anal_region, pain_during_bowel_movements, constipation",
+            "result": "Dimorphic hemmorhoids(piles)"
+        },
+        {
+            "id": 29,
+            "symptoms": "chest_pain, sweating, breathlessness, vomiting",
+            "result": "Heart attack"
+        },
+        {
+            "id": 30,
+            "symptoms": "prominent_veins_on_calf, swollen_legs, obesity, bruising, fatigue, cramps",
+            "result": "Varicose veins"
+        },
+        {
+            "id": 31,
+            "symptoms": "abnormal_menstruation, irritability, depression, swollen_extremeties, brittle_nails,  fatigue, weight_gain, cold_hands_and_feets, enlarged_thyroid, puffy_face_and_eyes, dizziness, lethargy, mood_swings ",
+            "result": "Hypothyroidism"
+        },
+        {
+            "id": 32,
+            "symptoms": "abnormal_menstruation, irritability, muscle_weakness, excessive_hunger, fast_heart_rate, weight_loss, mood_swings, restlessness, sweating, diarrhoea, fatigue",
+            "result": "Hyperthyroidism"
+        },
+        {
+            "id": 33,
+            "symptoms": "palpitations, irritability, slurred_speech, drying_and_tingling_lips, excessive_hunger, anxiety, sweating, headache, nausea, blurred_and_distorted_vision, fatigue, vomiting",
+            "result": "Hypoglycemia"
+        },
+        {
+            "id": 34,
+            "symptoms": "painful_walking, swelling_joints, hip_joint_pain, knee_pain, neck_pain, joint_pain",
+            "result": "Osteoarthristis"
+        },
+        {
+            "id": 35,
+            "symptoms": "headache, sweating, high_fever, vomiting, chills, headache, sweating",
+            "result": "Malaria"
+        },
+        {
+            "id": 36,
+            "symptoms": "unsteadiness, loss_of_balance, spinning_movements, nausea, headache, vomiting",
+            "result": "(vertigo) Paroymsal Positional Vertigo"
+        },
+        {
+            "id": 37,
+            "symptoms": "scurring, blackheads, pus_filled_pimples, skin_rash",
+            "result": "Acne"
+        },
+        {
+            "id": 38,
+            "symptoms": "continuous_feel_of_urine, foul_smell_of urine, bladder_discomfort, burning_micturition",
+            "result": "Urinary tract infection"
+        },
+        {
+            "id": 39,
+            "symptoms": "inflammatory_nails, small_dents_in_nails, silver_like_dusting, skin_peeling, joint_pain, skin_rash",
+            "result": "Psoriasis"
+        },
+        {
+            "id": 40,
+            "symptoms": "yellow_crust_ooze, red_sore_around_nose, blister, high_fever, skin_rash",
+            "result": "Impetigo"
+        }
+
+    ];
+
+    // Use a loop to iterate through tableData
+    for (var i = 0; i < tableData.length; i++) {
+        // Create a new table row
+        var row = `<tr>
+                        <td style="background: #F0DBAF">${tableData[i].id}</td>
+                        <td style="background: #F0DBAF" colspan="4">${tableData[i].symptoms}</td>
+                        <td style="background: #DC8686; color: white">${tableData[i].result}</td>
+                   </tr>`;
+
+        // Append the row to the table body
+        $('#tableBody').append(row);
+    }
+</script>
+{% endblock scripts %}

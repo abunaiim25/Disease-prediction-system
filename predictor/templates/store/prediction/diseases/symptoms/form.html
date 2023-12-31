@@ -39,11 +39,26 @@ Prediction - Disease Result
                         <div class="container">
                             <form method="POST" action="{% url 'predictdisease' %}" id="myform">
                                 {% csrf_token %}
-                                <div class="form-group row  mb-3">
+                                
+                                {% comment %} <div class="form-group row  mb-3">
                                     <label for="Symptom1" class="col-sm-2 col-form-label">Symptom1</label>
                                     <div class="col-sm-6">
                                         <input type="text" class="form-control" list="symp" multiple="multiple"
                                             name="Symptom1" id="Symptom1" placeholder="Fill In 1 Symptom" required="">
+                                    </div>
+                                    <datalist id="symp" style="padding: 10px; font-size: 16px;">
+                                        {% for symp in symptoms %}
+                                        <option style="padding: 5px; font-size: 14px;" value="{{symp}}">{{symp}}</option>
+                                        {% endfor %}
+                                    </datalist>
+                                </div> {% endcomment %}
+                                  
+
+                                <div class="form-group row  mb-3">
+                                    <label for="Symptom1" class="col-sm-2 col-form-label">Symptom1</label>
+                                    <div class="col-sm-6">
+                                        <input type="text" class="form-control" list="symp" multiple="multiple"
+                                            name="Symptom1" id="Symptom1" placeholder="Fill In 1 Symptom">
                                     </div>
                                     <datalist id="symp">
                                         {% for symp in symptoms %}
@@ -56,7 +71,7 @@ Prediction - Disease Result
                                     <label for="Symptom2" class="col-sm-2 col-form-label">Symptom2</label>
                                     <div class="col-sm-6">
                                         <input type="text" class="form-control" list="symp" name="Symptom2"
-                                            id="Symptom2" placeholder="Fill In 2 Symptom" required="">
+                                            id="Symptom2" placeholder="Fill In 2 Symptom">
                                     </div>
                                     <datalist id="symp">
                                         {% for symp in symptoms %}
@@ -69,7 +84,7 @@ Prediction - Disease Result
                                     <label for="Symptom3" class="col-sm-2 col-form-label">Symptom3</label>
                                     <div class="col-sm-6">
                                         <input type="text" class="form-control" list="symp" name="Symptom3"
-                                            placeholder="Fill In 3 Symptom" required="">
+                                            placeholder="Fill In 3 Symptom" >
                                     </div>
                                     <datalist id="symp">
                                         {% for symp in symptoms %}
@@ -82,7 +97,7 @@ Prediction - Disease Result
                                     <label for="Symptom4" class="col-sm-2 col-form-label">Symptom4</label>
                                     <div class="col-sm-6">
                                         <input type="text" class="form-control" multiple="multiple" list="symp"
-                                            name="Symptom4" placeholder="Fill In 4 Symptom" required="">
+                                            name="Symptom4" placeholder="Fill In 4 Symptom">
                                     </div>
                                     <datalist id="symp">
                                         {% for symp in symptoms %}
@@ -96,7 +111,7 @@ Prediction - Disease Result
                                     <label for="Symptom5" class="col-sm-2 col-form-label">Symptom5</label>
                                     <div class="col-sm-6">
                                         <input type="text" class="form-control" list="symp" name="Symptom5"
-                                            placeholder="Fill In 5 Symptom" required="">
+                                            placeholder="Fill In 5 Symptom">
                                     </div>
                                     <datalist id="symp">
                                         {% for symp in symptoms %}
