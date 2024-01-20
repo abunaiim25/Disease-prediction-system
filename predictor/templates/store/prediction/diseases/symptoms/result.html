@@ -19,8 +19,8 @@ Prediction - Disease Result
 
                 <h3 class="text-center">
                     <img src="{% static 'images/logo.png' %}" height="30px">
-                    <strong> Disease<span style="color: #103783;">-Predictor</span></strong>
-                </h3>
+                    <strong><span style="color: #103783;">Probable Disease Prediction</span></strong>
+                </h3> 
 
                 <div class="header_result">
                     <img src="{% static 'images/symptom.jpg' %}" width="100%" height="250" class="rounded" alt="dark">
@@ -34,13 +34,13 @@ Prediction - Disease Result
                             </form>
                     </div>
                     <div class="center">
-                        <h2>Your Disease Prediction Result</h2>
+                        <h2>Your Probable Disease Prediction Result</h2>
                     </div>
                 </div>
 
                 <div class="container">
                     {% if disease %}
-                    <h2 class="text-center mt-3">It seems like you are suffered from <span
+                    <h2 class="text-center mt-3">You maybe suffering from <span
                             style="color: red;">{{disease}}</span> </h2>
                     <p class="text-center">Symptoms: {{ psymptoms }}</p>
                     <div class="mb-4" style="display: flex; justify-content:center">
@@ -50,7 +50,7 @@ Prediction - Disease Result
                     </div>
                     {% endif %}
 
-                    <p class="text-center"><small>Consult a doctor before taking any decision.</small></p>
+                    <p class="text-center"><small>Consult a doctor before taking any decision. Please contact nearest hospitals</small></p>
                 </div>
             </div>
         </div>

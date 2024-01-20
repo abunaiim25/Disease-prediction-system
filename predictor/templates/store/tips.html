@@ -1,0 +1,134 @@
+{% extends 'store/layouts/main.html' %}
+{% load static %}
+
+{% block title %}
+Disease Predictor - Health Tips
+{% endblock title %}
+
+
+{% block content %}
+<div class="container">
+    <section id="prediction_banner_disease" style="background-image: url('{% static "images/tips/0.jpeg"%}');">
+        <div class="p-5 mt-5">
+            <h2 class="text-center text-bold" >Health Tips</h2>
+        </div>
+    </section>
+</div>
+
+<section class="featured" style="margin-top:50px">
+    <div class="container text-center">
+        <h3><strong>Tips</strong></h3>
+        <hr class="mx-auto">
+    </div>
+</section>
+
+<section class="form" style="margin-bottom:60px">
+    <div class="container">
+       
+        <div class="card p-5">
+            <h3>1. Eat a healthy diet</h3>
+            <div class="row">
+                <div class="col-md-5">
+                    <img src="{% static 'images/tips/1.png' %}" height="200px" width="100%" alt="Tips">
+                </div>
+                <div class="col-md-7">
+                    Eat a combination of different foods, including fruit, vegetables, legumes, nuts and whole grains. Adults should eat at least five portions (400g) of fruit and vegetables per day. You can improve your intake of fruits and vegetables by always including veggies in your meal; eating fresh fruit and vegetables as snacks; eating a variety of fruits and vegetables; and eating them in season. By eating healthy, you will reduce your risk of malnutrition and noncommunicable diseases (NCDs) such as diabetes, heart disease, stroke and cancer.
+                </div>
+            </div>
+        </div>
+
+        <div class="card p-5">
+            <h3>2. Consume less salt and sugar </h3>
+            <div class="row">
+                <div class="col-md-5">
+                    <img src="{% static 'images/tips/2.jpg' %}" height="200px" width="100%" alt="Tips">
+                </div>
+                <div class="col-md-7">
+                    Filipinos consume twice the recommended amount of sodium, putting them at risk of high blood pressure, which in turn increases the risk of heart disease and stroke. Most people get their sodium through salt. Reduce your salt intake to 5g per day, equivalent to about one teaspoon. It’s easier to do this by limiting the amount of salt, soy sauce, fish sauce and other high-sodium condiments when preparing meals; removing salt, seasonings and condiments from your meal table; avoiding salty snacks; and choosing low-sodium products.                
+                <br><br>
+                On the other hand, consuming excessive amounts of sugars increases the risk of tooth decay and unhealthy weight gain. In both adults and children, the intake of free sugars should be reduced to less than 10% of total energy intake. This is equivalent to 50g or about 12 teaspoons for an adult. WHO recommends consuming less than 5% of total energy intake for additional health benefits. You can reduce your sugar intake by limiting the consumption of sugary snacks, candies and sugar-sweetened beverages.
+                </div>
+            </div>
+        </div>
+
+        <div class="card p-5">
+            <h3>3. Reduce intake of harmful fats </h3>
+            <div class="row">
+                <div class="col-md-5">
+                    <img src="{% static 'images/tips/3.jpg' %}" height="200px" width="100%" alt="Tips">
+                </div>
+                <div class="col-md-7">
+                    Fats consumed should be less than 30% of your total energy intake. This will help prevent unhealthy weight gain and NCDs. There are different types of fats, but unsaturated fats are preferable over saturated fats and trans-fats. WHO recommends reducing saturated fats to less than 10% of total energy intake; reducing trans-fats to less than 1% of total energy intake; and replacing both saturated fats and trans-fats to unsaturated fats.
+                    <br><br>
+                    The preferable unsaturated fats are found in fish, avocado and nuts, and in sunflower, soybean, canola and olive oils; saturated fats are found in fatty meat, butter, palm and coconut oil, cream, cheese, ghee and lard; and trans-fats are found in baked and fried foods, and pre-packaged snacks and foods, such as frozen pizza, cookies, biscuits, and cooking oils and spreads. </div>
+            </div>
+        </div>
+
+        <div class="card p-5">
+            <h3>4. Avoid harmful use of alcohol</h3>
+            <div class="row">
+                <div class="col-md-5">
+                    <img src="{% static 'images/tips/4.jpg' %}" height="200px" width="100%" alt="Tips">
+                </div>
+                <div class="col-md-7">
+                    There is no safe level for drinking alcohol. Consuming alcohol can lead to health problems such as mental and behavioural disorders, including alcohol dependence, major NCDs such as liver cirrhosis, some cancers and heart diseases, as well as injuries resulting from violence and road clashes and collisions.                </div>
+            </div>
+        </div>
+
+        <div class="card p-5">
+            <h3>5. Don’t smoke </h3>
+            <div class="row">
+                <div class="col-md-5">
+                    <img src="{% static 'images/tips/5.jpeg' %}" height="200px" width="100%" alt="Tips">
+                </div>
+                <div class="col-md-7">
+                    Smoking tobacco causes NCDs such as lung disease, heart disease and stroke. Tobacco kills not only the direct smokers but even non-smokers through second-hand exposure. Currently, there are around 15.9 million Filipino adults who smoke tobacco but 7 in 10 smokers are interested or plan to quit.                    
+                    <br><br>
+                    If you are currently a smoker, it’s not too late to quit. Once you do, you will experience immediate and long-term health benefits. If you are not a smoker, that’s great! Do not start smoking and fight for your right to breathe tobacco-smoke-free air.            
+                </div>
+            </div>
+        </div>
+
+        
+        <div class="card p-5">
+            <h3>6. Be active</h3>
+            <div class="row">
+                <div class="col-md-5">
+                    <img src="{% static 'images/tips/6.jpg' %}" height="200px" width="100%" alt="Tips">
+                </div>
+                <div class="col-md-7">
+                    Physical activity is defined as any bodily movement produced by skeletal muscles that requires energy expenditure. This includes exercise and activities undertaken while working, playing, carrying out household chores, travelling, and engaging in recreational pursuits. The amount of physical activity you need depends on your age group but adults aged 18-64 years should do at least 150 minutes of moderate-intensity physical activity throughout the week. Increase moderate-intensity physical activity to 300 minutes per week for additional health benefits.           
+                </div>
+            </div>
+        </div>
+  
+        
+        <div class="card p-5">
+            <h3>7. Check your blood pressure regularly</h3>
+            <div class="row">
+                <div class="col-md-5">
+                    <img src="{% static 'images/tips/7.jpg' %}" height="200px" width="100%" alt="Tips">
+                </div>
+                <div class="col-md-7">
+                    Hypertension, or high blood pressure, is called a “silent killer”. This is because many people who have hypertension may not be aware of the problem as it may not have any symptoms. If left uncontrolled, hypertension can lead to heart, brain, kidney and other diseases. Have your blood pressure checked regularly by a health worker so you know your numbers. If your blood pressure is high, get the advice of a health worker. This is vital in the prevention and control of hypertension.               
+                 </div>
+            </div>
+        </div>
+
+        <div class="card p-5">
+            <h3>8. Drink only safe water</h3>
+            <div class="row">
+                <div class="col-md-5">
+                    <img src="{% static 'images/tips/8.jpg' %}" height="200px" width="100%" alt="Tips">
+                </div>
+                <div class="col-md-7">
+                    Drinking unsafe water can lead to water-borne diseases such as cholera, diarrhoea, hepatitis A, typhoid and polio. Globally, at least 2 billion people use a drinking water source contaminated with faeces. Check with your water concessionaire and water refilling station to ensure that the water you’re drinking is safe. In a setting where you are unsure of your water source, boil your water for at least one minute. This will destroy harmful organisms in the water. Let it cool naturally before drinking                
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+
+{% endblock content %}

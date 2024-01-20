@@ -17,6 +17,9 @@ def support(request):
 def about_disease(request):
     return render(request, 'store/about_disease.html')
 
+def tips(request):
+    return render(request, 'store/tips.html')
+
 @login_required(login_url='login')
 def saved(request):
     predict = SavePredict.objects.filter(user=request.user).order_by('-created_at')#descending

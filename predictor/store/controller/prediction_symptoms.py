@@ -121,8 +121,8 @@ def predictdisease(request):
     l2 = []
     for x in range(0, len(symptoms)):
         l2.append(0)
-        print("Am printing L1")
-        print(l2)
+        #print("Am printing L1")
+        #print(l2)
 
     data.replace(
         {'prognosis': {'Fungal infection': 0, 'Allergy': 1, 'GERD': 2, 'Chronic cholestasis': 3, 'Drug Reaction': 4,
@@ -147,9 +147,9 @@ def predictdisease(request):
     X = data[symptoms]
     y = data[["prognosis"]]
     np.ravel(y)
-    print("X Features")
+    print("X Training Features")
     print(X.head())
-    print("y Features")
+    print("y Training Features")
     print(y.head())
 
     # Testing dataset

@@ -8,6 +8,7 @@ urlpatterns = [
      path('about-disease', views.about_disease, name="about_disease"),
      path('predict-saved', views.saved, name="saved"),
      path('save_prediction', views.save_prediction, name="save_prediction"),
+     path('tips', views.tips, name="tips"),
      
 
      #auth

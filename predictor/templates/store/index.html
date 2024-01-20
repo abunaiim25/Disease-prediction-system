@@ -9,8 +9,8 @@ Disease Predictor - Home
 {% block content %}
 <section id="home" style="background-image: url('{% static "images/robot_doctor.jpg"%}');">
     <div class="container">
-      <h2 style="color: white">DISEASE PREDICTION SYSTEM</h2>
-      <h4 style="color: white">USING MACHINE LEARNING & DEEP LEARNING</h4>
+      <h2 style="color: white">PROBABLE DISEASE PREDICTION SYSTEM</h2>
+      <h4 style="color: white">USING MACHINE LEARNING </h4>
 
       <div class="mt-5">
         {% if request.user.is_authenticated %}
@@ -25,7 +25,7 @@ Disease Predictor - Home
 
   <section class="featured pb-5 " style="margin-top: 50px;">
     <div class="container text-center">
-      <h3><strong>Disease Prediction List</strong></h3>
+      <h3><strong>Probable Disease Prediction List</strong></h3>
       <hr class="mx-auto">
       <p>The list of diseases that will be prediction, As a result you can verify your risk</p>
     </div>
@@ -38,7 +38,7 @@ Disease Predictor - Home
                     <img class="card-img-top" src="{% static 'images/symptom.jpg' %}" height="200px" alt="Symptoms To Disease">
                     <div class="card-body">
                       <h5 class="card-title"><b>Symptoms To Find Disease</b></h5>
-                      <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                      {% comment %} <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p> {% endcomment %}
                     </div>
                   </div>
             </div>
@@ -47,7 +47,7 @@ Disease Predictor - Home
                   <img class="card-img-top" src="{% static 'images/diabetes.jpg' %}" height="200px" alt="Diabetics">
                   <div class="card-body">
                     <h5 class="card-title"><b>Diabetics</b></h5>
-                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                    {% comment %} <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p> {% endcomment %}
                   </div>
                 </div>
           </div>
@@ -56,7 +56,7 @@ Disease Predictor - Home
                   <img class="card-img-top" src="{% static 'images/heart.jpg' %}" height="200px" alt="Heart Disease">
                   <div class="card-body">
                     <h5 class="card-title"><b>Heart Disease</b></h5>
-                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                    {% comment %} <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p> {% endcomment %}
                   </div>
                 </div>
           </div>
@@ -65,7 +65,7 @@ Disease Predictor - Home
                     <img class="card-img-top" src="{% static 'images/cancer.jpg' %}" height="200px" alt="Cancer">
                     <div class="card-body">
                       <h5 class="card-title"><b>Cancer</b></h5>
-                      <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                      {% comment %} <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p> {% endcomment %}
                     </div>
                   </div>
             </div>
@@ -74,7 +74,7 @@ Disease Predictor - Home
                     <img class="card-img-top" src="{% static 'images/kidney.jpg' %}" alt="Kidney Disease">
                     <div class="card-body">
                       <h5 class="card-title"><b>Kidney Disease</b></h5>
-                      <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                      {% comment %} <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p> {% endcomment %}
                     </div>
                   </div>
             </div>
@@ -83,7 +83,7 @@ Disease Predictor - Home
                     <img class="card-img-top" src="{% static 'images/liver.jpeg' %}" alt="Liver Disease">
                     <div class="card-body">
                       <h5 class="card-title"><b>Liver Disease</b></h5>
-                      <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                      {% comment %} <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p> {% endcomment %}
                     </div>
                   </div>
             </div>
