@@ -11,10 +11,9 @@ Machine Learning (AI), HTML, CSS, Bootstrap, JavaScript, Jquery, Django, MySQL (
 Model: Decision Tree Classifier, Random Forest Classifier, Logistic Regression.
 
 Accuracy:
+
 Symptom to Disease Prediction	(Decision Tree Classifier)	Accuracy-100%
-
 Heart Disease	(Random Forest Classifier)	Accuracy-99%
-
 Diabetics	(Logistic Regression)	Accuracy-95%
 
 ## Report:
