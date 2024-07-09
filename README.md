@@ -7,3 +7,6 @@ Diabetics prediction, Heart disease prediction, cancer prediction, Support.
 
 ## Tools:
 Machine Learning (AI), HTML, CSS, Bootstrap, JavaScript, Jquery, Django, MySQL (Web).
+
+## Report:
+[Probable Disease Prediction Application Based on Machine Learning.pdf](https://github.com/user-attachments/files/16145560/Probable.Disease.Prediction.Application.Based.on.Machine.Learning.pdf)
